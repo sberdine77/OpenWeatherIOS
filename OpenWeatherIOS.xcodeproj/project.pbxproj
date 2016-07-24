@@ -14,6 +14,10 @@
 		E82445961D412861004F5620 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E82445941D412861004F5620 /* LaunchScreen.storyboard */; };
 		E82445A11D412861004F5620 /* OpenWeatherIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82445A01D412861004F5620 /* OpenWeatherIOSTests.swift */; };
 		E82445AC1D412861004F5620 /* OpenWeatherIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82445AB1D412861004F5620 /* OpenWeatherIOSUITests.swift */; };
+		E82445BA1D41294D004F5620 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E82445B91D41294D004F5620 /* MapKit.framework */; };
+		E82445BD1D4135C3004F5620 /* CitiesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82445BC1D4135C3004F5620 /* CitiesList.swift */; };
+		E82445BF1D4135ED004F5620 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82445BE1D4135ED004F5620 /* Forecast.swift */; };
+		E8F2F6C61D419917009BA151 /* CityForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F2F6C51D419917009BA151 /* CityForecast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		E82445A71D412861004F5620 /* OpenWeatherIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenWeatherIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E82445AB1D412861004F5620 /* OpenWeatherIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherIOSUITests.swift; sourceTree = "<group>"; };
 		E82445AD1D412861004F5620 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E82445B91D41294D004F5620 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E82445BC1D4135C3004F5620 /* CitiesList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CitiesList.swift; sourceTree = "<group>"; };
+		E82445BE1D4135ED004F5620 /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		E8F2F6C51D419917009BA151 /* CityForecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityForecast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E82445BA1D41294D004F5620 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,7 +86,9 @@
 		E824457F1D412861004F5620 = {
 			isa = PBXGroup;
 			children = (
+				E82445B91D41294D004F5620 /* MapKit.framework */,
 				E824458A1D412861004F5620 /* OpenWeatherIOS */,
+				E8F2F6C41D419879009BA151 /* Data */,
 				E824459F1D412861004F5620 /* OpenWeatherIOSTests */,
 				E82445AA1D412861004F5620 /* OpenWeatherIOSUITests */,
 				E82445891D412861004F5620 /* Products */,
@@ -99,6 +110,8 @@
 			children = (
 				E824458B1D412861004F5620 /* AppDelegate.swift */,
 				E824458D1D412861004F5620 /* ViewController.swift */,
+				E82445BC1D4135C3004F5620 /* CitiesList.swift */,
+				E82445BE1D4135ED004F5620 /* Forecast.swift */,
 				E824458F1D412861004F5620 /* Main.storyboard */,
 				E82445921D412861004F5620 /* Assets.xcassets */,
 				E82445941D412861004F5620 /* LaunchScreen.storyboard */,
@@ -123,6 +136,14 @@
 				E82445AD1D412861004F5620 /* Info.plist */,
 			);
 			path = OpenWeatherIOSUITests;
+			sourceTree = "<group>";
+		};
+		E8F2F6C41D419879009BA151 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E8F2F6C51D419917009BA151 /* CityForecast.swift */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +214,11 @@
 				TargetAttributes = {
 					E82445871D412861004F5620 = {
 						CreatedOnToolsVersion = 7.3.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					E824459B1D412861004F5620 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -256,6 +282,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E82445BF1D4135ED004F5620 /* Forecast.swift in Sources */,
+				E82445BD1D4135C3004F5620 /* CitiesList.swift in Sources */,
+				E8F2F6C61D419917009BA151 /* CityForecast.swift in Sources */,
 				E824458E1D412861004F5620 /* ViewController.swift in Sources */,
 				E824458C1D412861004F5620 /* AppDelegate.swift in Sources */,
 			);
@@ -482,6 +511,7 @@
 				E82445B21D412861004F5620 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E82445B31D412861004F5620 /* Build configuration list for PBXNativeTarget "OpenWeatherIOSTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +520,7 @@
 				E82445B51D412861004F5620 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E82445B61D412861004F5620 /* Build configuration list for PBXNativeTarget "OpenWeatherIOSUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +529,7 @@
 				E82445B81D412861004F5620 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
